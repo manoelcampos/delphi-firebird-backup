@@ -1,0 +1,2 @@
+REM Cria uma tarefa agendada para executar backup diariamente a cada 1 dia, iniciando antes do meio dia, usando a conta do usuário system
+schtasks /create /sc diariamente /mo 1 /st 11:30:00 /tn "Backup Meu BD" /ru system /tr "bin\backupfb.exe -b fb15 localhost NomeBancoDados .\"  
